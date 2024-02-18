@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>To Do</title>
     <script type="text/javascript" src="./index.js"></script>
@@ -10,8 +12,45 @@
 <body>
     <div id="container">
         <div id="main">
-            <header></header>
-            <div id="sidebar"></div>
+            <header>
+                
+                <nav id="date-btns">
+                    <form>
+                        <input id="today" type="radio" name="view" value="today">
+                        <label for="today">Today</label>
+                        <input id="week" type="radio" name="view" value="week">
+                        <label for="week">This Week</label>
+                        <input id="month" type="radio" name="view" value="month">
+                        <label for="month">This Month</label>
+                    </form>
+                </nav>
+                <nav id="view-btns">
+                    <button id="theme-btn"><img class="icon" src="./assets/light.svg" alt="sun"></button>
+                    <button id="pomodoro-btn"><img id="pomodoro-img" class="icon" src="./assets/tomato.svg" alt=""></button>
+                    <button id="new-task"><img class="icon" src="./assets/add.svg" alt="plus"></button>
+                    <dialog id="task-dialog">
+                        <input type="text" name="title" id="title" placeholder="Title">
+                        <button type="submit" id="submit-task">Add</button>
+                    </dialog>
+                    <button ><img id="tile-view" class="icon" src="./assets/grid.svg" alt=""></button>
+                    <button ><img id="list-view" class="icon" src="./assets/list.svg" alt=""></button>
+                </nav>
+            </header>
+            <div id="sidebar">
+                <h3>todo.</h3>
+                <nav>
+                    <h2>Tasks</h2>
+                    <div id="task-btns"> 
+                        <ul>
+                            <li><button class="task-view-btn"><img src="./assets/clipboard.svg" alt="clipboard">All Tasks</button></li>
+                            <li><button class="task-view-btn"><img src="./assets/complete.svg" alt="">Completed</button></li><li><button class="task-view-btn"><img src="./assets/delete.svg" alt="trash">Deleted</button></li>
+                        </ul>
+                    </div>
+                    <div id="tag-btns">
+                        <h2>Tags</h2>
+                    </div>
+                </nav>
+            </div>
             <div id="task-area"></div>
         </div>
     </div>    
