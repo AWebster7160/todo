@@ -13,7 +13,6 @@
     <div id="container">
         <div id="main">
             <header>
-                
                 <nav id="date-btns">
                     <form>
                         <input id="today" type="radio" name="view" value="today">
@@ -26,14 +25,22 @@
                 </nav>
                 <nav id="view-btns">
                     <button id="theme-btn"><img class="icon" src="./assets/light.svg" alt="sun"></button>
-                    <button id="pomodoro-btn"><img id="pomodoro-img" class="icon" src="./assets/tomato.svg" alt=""></button>
+                    <button id="pomodoro-btn"><img id="pomodoro-img" class="icon" src="./assets/tomato.svg" alt="pomodoro button"></button>
                     <button id="new-task"><img class="icon" src="./assets/add.svg" alt="plus"></button>
                     <dialog id="task-dialog">
                         <input type="text" name="title" id="title" placeholder="Title">
-                        <button type="submit" id="submit-task">Add</button>
+                        <textarea name="notes" id="notes" placeholder="What do you need to get done?"></textarea>
+                        <button id="close-task-dialog"><img id="close-icon" src="assets/close.svg" alt="close button"></button>
+                        <nav>
+                            <img id="calendar-icon" src="./assets/calendar.svg" alt="calendar">
+                            <input type="date">
+                            <img id="tag-icon" src="./assets/tag.svg" alt="tag">
+                            <select name="tags" id="tags"></select>
+                            <button type="submit" id="submit-task-btn"><img id="submit-task" src="./assets/add-circle.svg" alt="plus"></button>
+                        </nav>
                     </dialog>
-                    <button ><img id="tile-view" class="icon" src="./assets/grid.svg" alt=""></button>
-                    <button ><img id="list-view" class="icon" src="./assets/list.svg" alt=""></button>
+                    <button ><img id="tile-view" class="icon" src="./assets/grid.svg" alt="tile"></button>
+                    <button ><img id="list-view" class="icon" src="./assets/list.svg" alt="list"></button>
                 </nav>
             </header>
             <div id="sidebar">
@@ -43,7 +50,7 @@
                     <div id="task-btns"> 
                         <ul>
                             <li><button class="task-view-btn"><img src="./assets/clipboard.svg" alt="clipboard">All Tasks</button></li>
-                            <li><button class="task-view-btn"><img src="./assets/complete.svg" alt="">Completed</button></li><li><button class="task-view-btn"><img src="./assets/delete.svg" alt="trash">Deleted</button></li>
+                            <li><button class="task-view-btn"><img src="./assets/complete.svg" alt="checkmark">Completed</button></li><li><button class="task-view-btn"><img src="./assets/delete.svg" alt="trash">Deleted</button></li>
                         </ul>
                     </div>
                     <div id="tag-btns">

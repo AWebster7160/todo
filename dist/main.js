@@ -1,6 +1,23 @@
 "use strict";
 (self["webpackChunktodo"] = self["webpackChunktodo"] || []).push([["main"],{
 
+/***/ "./src/get-task-info.js":
+/*!******************************!*\
+  !*** ./src/get-task-info.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ getTaskInfo)
+/* harmony export */ });
+function getTaskInfo() {
+    const submitTask = document.querySelector('#submit-task');
+    submitTask
+}
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -8,7 +25,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _show_task_dialog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./show-task-dialog */ "./src/show-task-dialog.js");
+/* harmony import */ var _get_task_info__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-task-info */ "./src/get-task-info.js");
 
 
 const newTask = document.querySelector('#new-task');
@@ -16,22 +33,6 @@ const newTask = document.querySelector('#new-task');
     newTask.addEventListener('click', () => {
         taskDialog.showModal();
     });
-
-/***/ }),
-
-/***/ "./src/show-task-dialog.js":
-/*!*********************************!*\
-  !*** ./src/show-task-dialog.js ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ showTaskDialog)
-/* harmony export */ });
-function showTaskDialog() {
-    
-}
 
 /***/ })
 
@@ -41,4 +42,4 @@ function showTaskDialog() {
 /******/ var __webpack_exports__ = (__webpack_exec__("./src/index.js"));
 /******/ }
 ]);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUFnRDs7QUFFaEQ7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLOzs7Ozs7Ozs7Ozs7OztBQ05VO0FBQ2Y7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL3RvZG8vLi9zcmMvaW5kZXguanMiLCJ3ZWJwYWNrOi8vdG9kby8uL3NyYy9zaG93LXRhc2stZGlhbG9nLmpzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBzaG93VGFza0RpYWxvZyBmcm9tIFwiLi9zaG93LXRhc2stZGlhbG9nXCI7XG5cbmNvbnN0IG5ld1Rhc2sgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcjbmV3LXRhc2snKTtcbiAgICBjb25zdCB0YXNrRGlhbG9nID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI3Rhc2stZGlhbG9nJyk7XG4gICAgbmV3VGFzay5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHtcbiAgICAgICAgdGFza0RpYWxvZy5zaG93TW9kYWwoKTtcbiAgICB9KTsiLCJleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBzaG93VGFza0RpYWxvZygpIHtcbiAgICBcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7O0FBQWU7QUFDZjtBQUNBO0FBQ0E7Ozs7Ozs7Ozs7OztBQ0gwQzs7QUFFMUM7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdG9kby8uL3NyYy9nZXQtdGFzay1pbmZvLmpzIiwid2VicGFjazovL3RvZG8vLi9zcmMvaW5kZXguanMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gZ2V0VGFza0luZm8oKSB7XG4gICAgY29uc3Qgc3VibWl0VGFzayA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJyNzdWJtaXQtdGFzaycpO1xuICAgIHN1Ym1pdFRhc2tcbn0iLCJpbXBvcnQgZ2V0VGFza0luZm8gZnJvbSBcIi4vZ2V0LXRhc2staW5mb1wiO1xuXG5jb25zdCBuZXdUYXNrID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI25ldy10YXNrJyk7XG4gICAgY29uc3QgdGFza0RpYWxvZyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJyN0YXNrLWRpYWxvZycpO1xuICAgIG5ld1Rhc2suYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB7XG4gICAgICAgIHRhc2tEaWFsb2cuc2hvd01vZGFsKCk7XG4gICAgfSk7Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9

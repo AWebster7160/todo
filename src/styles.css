@@ -58,6 +58,13 @@ nav button {
     margin-left: 14px;
 }
 
+input[type='radio'] {
+    border: 0;
+    height: 1.4em;
+    width: 1.4em;
+    accent-color: black;
+}
+
 #view-btns {
     margin-left: auto;
 }
@@ -130,14 +137,63 @@ nav button {
     border-bottom-right-radius: 24px;
 }
 
-#task-dialog {
+#task-dialog:modal {
     height: 530px;
     width: 800px;
     border-radius: 24px;
     border: none;
+    display: flex;
+    flex-direction: column;
     
 }
 
+#task-dialog input {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif, monospace;
+    border: none;
+    outline: none;
+}
+
+#title {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+#notes {
+    font-size: 20px;
+    width: 780px;
+    height: 480px;
+    overflow: auto;
+    border: none;
+    outline: none;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif, monospace;
+    resize: none;
+}
+
+#task-dialog nav {
+    margin-top: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 780px;
+}
+
+#tag-icon {
+    margin-left: 14px;
+}
+
+#close-icon {
+    position: absolute;
+    margin-top: -490px;
+    margin-left: 365px;
+}
+
+#submit-task {
+    height: 42px;
+    width: 42px;
+    margin-left: 490px;
+}
+
 #task-dialog::backdrop {
-    background-color: hsla(0, 0%, 20%, 0.7);
+    background-color: hsla(0, 0%, 20%, 0.75);
 }
