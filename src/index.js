@@ -1,6 +1,7 @@
 import showTask from "./show-task.js";
 import getTaskInfo from "./get-task-info.js";
 import completeTask from "./complete-task.js";
+import showComplete from "./show-complete.js";
 
 const newTask = document.querySelector('#new-task');
     const taskDialog = document.querySelector('#task-dialog');
@@ -21,10 +22,12 @@ const newTask = document.querySelector('#new-task');
     });
     document.addEventListener('click', (e) => {
         const target = e.target.closest('.check-box');
-        const targetId = e.target.closest('.card');
+        const grandparent = e.target.closest('.card');
         if (target) {
-            const taskId = targetId.id;
+            const taskId = grandparent.id;
             console.log(taskId);
             completeTask(taskList, taskId);
+            console.log(taskList);
+            showComplete(grandparent);
         }
     });

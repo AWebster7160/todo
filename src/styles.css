@@ -256,3 +256,7 @@ input[type='radio'] {
     min-width: 16px;
     border: 2px solid black;
 }
+
+.check-box.done {
+    background-color: red;
+}
