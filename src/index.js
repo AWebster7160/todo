@@ -15,6 +15,6 @@ const newTask = document.querySelector('#new-task');
     submitTask.addEventListener('click', () => {
         taskList.push(getTaskInfo());
         console.log(taskList);
-        showTask(taskList[0].title);
+        showTask(taskList[taskList.length - 1].taskTitle, taskList[taskList.length - 1].taskNotes);
         taskDialog.close();
     })
