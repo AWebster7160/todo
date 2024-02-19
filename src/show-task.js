@@ -1,12 +1,11 @@
-import getTaskInfo from "./get-task-info";
+import getUniqueId from "./get-unique-id";
 
-export default function showTask() {
-    getTaskInfo();
+export default function showTask(title) {
     const taskArea = document.querySelector('#task-area');
-    const task = document.createElement('div');
+    const taskDiv = document.createElement('div');
     /* will need to determine if grid or list is toggled before setting actual class */
-    task.setAttribute('class', 'card');
-    task.textContent = toString(taskTitle);
-    taskArea.appendChild(task);
-
+    taskDiv.setAttribute('class', 'card');
+    taskDiv.setAttribute('id', `${getUniqueId()}`);
+    taskDiv.textContent = title;
+    taskArea.appendChild(taskDiv);
 }

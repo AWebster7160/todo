@@ -133,9 +133,7 @@ input[type='radio'] {
     align-items: center;
 }
 
-#task-area {
-    border-bottom-right-radius: 24px;
-}
+
 
 #task-dialog:modal {
     height: 530px;
@@ -196,4 +194,24 @@ input[type='radio'] {
 
 #task-dialog::backdrop {
     background-color: hsla(0, 0%, 20%, 0.75);
+}
+
+#task-area {
+    grid-area: 2 / 2 / 3 / 3;
+    overflow-y: auto;
+    border-bottom-right-radius: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 230px);
+    grid-template-rows: repeat(auto-fit, 150px);
+    justify-content: start;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.card {
+    height: 140px;
+    width: 220px;
+    background-color: white;
+
 }

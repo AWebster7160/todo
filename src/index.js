@@ -1,10 +1,11 @@
-import showTask from "./show-task";
+import showTask from "./show-task.js";
+import getTaskInfo from "./get-task-info.js";
 
 const newTask = document.querySelector('#new-task');
     const taskDialog = document.querySelector('#task-dialog');
     const closeBtn = document.querySelector('#close-icon');
     const submitTask = document.querySelector('#submit-task');
-
+    const taskList = [];
     newTask.addEventListener('click', () => {
         taskDialog.showModal();
     });
@@ -12,5 +13,8 @@ const newTask = document.querySelector('#new-task');
         taskDialog.close();
     });
     submitTask.addEventListener('click', () => {
-        showTask();
+        taskList.push(getTaskInfo());
+        console.log(taskList);
+        showTask(taskList[0].title);
+        taskDialog.close();
     })

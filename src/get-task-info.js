@@ -1,10 +1,11 @@
-import getUniqueId from "./get-unique-id";
-
 export default function getTaskInfo() {
-    const uniqueId = getUniqueId();
-    const toString(uniqueId) = {
-        title: title
+    function createTask () {
+        const title = document.querySelector('#title');
+        const taskTitle = title.value;
+        const notes = document.querySelector('#notes');
+        const taskNotes = notes.value;
+        return { taskTitle, taskNotes };
     };
-    const title = document.querySelector('#title');
-    const taskTitle = title.value;
+    const task = createTask();
+    return task;
 }
