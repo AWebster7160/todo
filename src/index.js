@@ -29,5 +29,19 @@ const newTask = document.querySelector('#new-task');
             completeTask(taskList, taskId);
             console.log(taskList);
             showComplete(grandparent);
+            const viewBox = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
+            viewBox.setAttributeNS(null, "viewBox", "0 0 11 9");
+            // viewBox.setAttributeNS(null, "height", "100%");
+            // viewBox.setAttributeNS(null, "width", "100%");
+            const check = document.createElementNS("http://www.w3.org/2000/svg",'path');
+            check.setAttributeNS(null, "d", "M0.375,4.892l3.227,3.142l6.775,-7.659")
+            check.setAttributeNS(null, "pathLength", "1");
+            check.setAttribute('class', 'check');
+            if (target.childNodes.length > 0) {
+                target.removeChild(target.firstChild);
+            } else {
+                target.appendChild(viewBox)
+                viewBox.appendChild(check);
+            }
         }
     });
