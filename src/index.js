@@ -6,14 +6,23 @@ import 'vanilla-icon-picker/dist/themes/default.min.css';
 import IconPicker from 'vanilla-icon-picker';
 
 
-const iconPickerButton = new IconPicker('#main', {
+
+const newTask = document.querySelector('#new-task');
+const newTag = document.querySelector('.new-tag-btn');
+const taskDialog = document.querySelector('#task-dialog');
+const closeBtn = document.querySelector('#close-icon');
+const tagBtns = document.querySelector('#tag-btns');
+const submitTask = document.querySelector('#submit-task');
+const taskList = [];
+
+const iconPickerButton = new IconPicker('#tag-icon', {
+    
     theme: 'default',
     iconSource: [
-        'Material Design Icons',
         {
-            key: 'MyIcons',
-            prefix: 'test',
-            url: 'https://raw.githubusercontent.com/AWebster7160/todo/main/src/assets/test.json'
+            key: 'Material Symbols',
+            prefix: 'material-symbols',
+            url: 'https://raw.githubusercontent.com/iconify/icon-sets/master/json/material-symbols.json'
         }
     ],
     closeOnSelect: true,
@@ -26,11 +35,30 @@ const iconPickerButton = new IconPicker('#main', {
     }
 });
 
-const newTask = document.querySelector('#new-task');
-const taskDialog = document.querySelector('#task-dialog');
-const closeBtn = document.querySelector('#close-icon');
-const submitTask = document.querySelector('#submit-task');
-const taskList = [];
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.new-tag-btn');
+    const newTagWrapper = document.createElement('div');
+    const tagPicker = document.createElement('button');
+    tagPicker.setAttribute('class', 'tag-picker');
+    if (btn) {
+            tagPicker.textContent = 'test';
+            btn.replaceWith(newTagWrapper);
+            newTagWrapper.appendChild(tagPicker);
+    }
+});
+
+document.addEventListener('click', (e) => {
+    const tagPick = e.target.closest('.tag-picker');
+    if (tagPick) {
+        const pickResult = document.createElement('span');
+        pickResult.textContent = 'result';
+        tagPick.replaceWith(pickResult);
+        const newTagBtn = document.createElement('button');
+        newTagBtn.setAttribute('class', 'new-tag-btn');
+        newTagBtn.textContent = 'Add a new tag';
+        tagBtns.appendChild(newTagBtn);
+        }
+});
 
 newTask.addEventListener('click', () => {
     taskDialog.showModal();

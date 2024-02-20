@@ -143,6 +143,7 @@ input[type='radio'] {
     border: none;
     display: flex;
     flex-direction: column;
+    z-index: -2;
     
 }
 
@@ -195,6 +196,11 @@ input[type='radio'] {
 
 #task-dialog::backdrop {
     background-color: hsla(0, 0%, 20%, 0.75);
+}
+
+#tags {
+    height: 20px;
+    width: 80px;
 }
 
 #task-area {
