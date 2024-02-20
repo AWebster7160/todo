@@ -19,6 +19,4 @@ export default function showTask(id, title, notes) {
     taskHeader.appendChild(checkBox);
     taskHeader.appendChild(taskTitle);
     taskDiv.appendChild(taskNotes);
-    
-
 }

@@ -2,63 +2,16 @@ import showTask from "./show-task.js";
 import getTaskInfo from "./get-task-info.js";
 import completeTask from "./complete-task.js";
 import showComplete from "./show-complete.js";
-import 'vanilla-icon-picker/dist/themes/default.min.css';
-import IconPicker from 'vanilla-icon-picker';
-
-
+import getCompleteTasks from "./get-complete-tasks.js";
 
 const newTask = document.querySelector('#new-task');
-const newTag = document.querySelector('.new-tag-btn');
 const taskDialog = document.querySelector('#task-dialog');
 const closeBtn = document.querySelector('#close-icon');
-const tagBtns = document.querySelector('#tag-btns');
 const submitTask = document.querySelector('#submit-task');
+const completTaskBtn = document.querySelector('#complete-task-btn')
+const tagBtns = document.querySelector('#tag-btns');
+
 const taskList = [];
-
-const iconPickerButton = new IconPicker('#tag-icon', {
-    
-    theme: 'default',
-    iconSource: [
-        {
-            key: 'Material Symbols',
-            prefix: 'material-symbols',
-            url: 'https://raw.githubusercontent.com/iconify/icon-sets/master/json/material-symbols.json'
-        }
-    ],
-    closeOnSelect: true,
-    defaultValue: null,
-    i18n: {
-        'input:placeholder': 'Search icon…',
-        'text:title': 'Select icon',
-        'text:empty': 'No results found…',
-        'btn:save': 'Save'
-    }
-});
-
-document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.new-tag-btn');
-    const newTagWrapper = document.createElement('div');
-    const tagPicker = document.createElement('button');
-    tagPicker.setAttribute('class', 'tag-picker');
-    if (btn) {
-            tagPicker.textContent = 'test';
-            btn.replaceWith(newTagWrapper);
-            newTagWrapper.appendChild(tagPicker);
-    }
-});
-
-document.addEventListener('click', (e) => {
-    const tagPick = e.target.closest('.tag-picker');
-    if (tagPick) {
-        const pickResult = document.createElement('span');
-        pickResult.textContent = 'result';
-        tagPick.replaceWith(pickResult);
-        const newTagBtn = document.createElement('button');
-        newTagBtn.setAttribute('class', 'new-tag-btn');
-        newTagBtn.textContent = 'Add a new tag';
-        tagBtns.appendChild(newTagBtn);
-        }
-});
 
 newTask.addEventListener('click', () => {
     taskDialog.showModal();
@@ -86,8 +39,6 @@ document.addEventListener('click', (e) => {
         showComplete(grandparent);
         const viewBox = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
         viewBox.setAttributeNS(null, "viewBox", "0 0 11 9");
-        // viewBox.setAttributeNS(null, "height", "100%");
-        // viewBox.setAttributeNS(null, "width", "100%");
         const check = document.createElementNS("http://www.w3.org/2000/svg",'path');
         check.setAttributeNS(null, "d", "M0.375,4.892l3.227,3.142l6.775,-7.659")
         check.setAttributeNS(null, "pathLength", "1");
@@ -100,3 +51,8 @@ document.addEventListener('click', (e) => {
         }
     }
 });
+
+
+completTaskBtn.addEventListener('click', () => {
+    getCompleteTasks(taskList);
+})

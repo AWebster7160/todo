@@ -11,3 +11,5 @@ export default function completeTask(arr, id) {
         });
     }
 }
+
+

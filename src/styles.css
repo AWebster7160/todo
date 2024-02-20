@@ -198,10 +198,10 @@ input[type='radio'] {
     background-color: hsla(0, 0%, 20%, 0.75);
 }
 
-#tags {
+/* #tags {
     height: 20px;
     width: 80px;
-}
+} */
 
 #task-area {
     grid-area: 2 / 2 / 3 / 3;
