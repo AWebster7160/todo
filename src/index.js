@@ -9,8 +9,9 @@ import IconPicker from 'vanilla-icon-picker';
 const iconPickerButton = new IconPicker('#main', {
     theme: 'default',
     iconSource: [
+        'Material Design Icons',
         {
-            key: 'test',
+            key: 'MyIcons',
             prefix: 'test',
             url: 'https://raw.githubusercontent.com/AWebster7160/todo/main/src/assets/test.json'
         }
