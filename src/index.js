@@ -10,9 +10,9 @@ const iconPickerButton = new IconPicker('#main', {
     theme: 'default',
     iconSource: [
         {
-            key: 'material',
-            prefix: 'ai ai-',
-            url: 'https://raw.githubusercontent.com/iconify/icon-sets/master/json/material-symbols.json'
+            key: 'test',
+            prefix: 'test',
+            url: 'https://raw.githubusercontent.com/AWebster7160/todo/main/src/assets/test.json'
         }
     ],
     closeOnSelect: true,

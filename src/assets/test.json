@@ -1,5 +1,11 @@
 {
 	"prefix": "test",
+	"info": {
+		"name": "test",
+		"height": 24,
+		"category": "General",
+		"palette": false
+	},
 	"lastModified": 1708452423,
 	"icons": {
 		"123": {
