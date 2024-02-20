@@ -1,13 +1,17 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
   devtool: 'inline-source-map',
   devServer: {
     static: './src',
+    open: {
+      app: {
+        name:'chrome',
+      },
+    },
   },
   output: {
     filename: '[name].js',
@@ -21,5 +25,13 @@ module.exports = {
     new HtmlWebpackPlugin({
         template: './src/index.html',
     }),
-],
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
 };
